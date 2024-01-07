@@ -1,0 +1,8 @@
+query news {
+  allNews {
+    id
+    heading
+    description
+    scope
+  }
+}

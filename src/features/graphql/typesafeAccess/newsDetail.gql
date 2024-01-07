@@ -1,0 +1,11 @@
+query NewsDetail {
+  allNewsDetail {
+    id
+    newsId
+    title
+    url
+    quote
+    published
+    favorite
+  }
+}

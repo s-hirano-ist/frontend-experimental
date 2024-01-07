@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  db:
+    container_name: experimental-db
+    build:
+      context: .
+    volumes:
+      - experimental-db-data:/var/lib/postgresql/data
+    ports:
+      - 5556:5432
+    environment:
+      POSTGRES_USER: ${USERNAME}
+      POSTGRES_PASSWORD: ${PASSWORD}
+      POSTGRES_DB: experimental-db
+
+volumes:
+  experimental-db-data:

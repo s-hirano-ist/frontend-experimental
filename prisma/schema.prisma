@@ -1,0 +1,32 @@
+// this file should be the same as https://github.com/s-hirano-ist/rss-dumper/blob/main/prisma/schema.prisma
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+model News {
+  id          Int          @id @default(autoincrement())
+  heading     String       @unique
+  description String
+  newsDetail  NewsDetail[]
+
+  @@map("news")
+}
+
+model NewsDetail {
+  id        Int     @id @default(autoincrement())
+  title     String
+  url       String
+  quote     String?
+  published Boolean @default(false)
+  favorite  Boolean @default(false)
+  news      News?   @relation(fields: [newsId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  newsId    Int     @map("news_id")
+
+  @@map("news_detail")
+}
