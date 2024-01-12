@@ -1,6 +1,6 @@
 {
   "name": "frontend-experimental",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "experimental frontend project",
   "author": "s-hirano-ist",
   "packageManager": "pnpm@8.14.0",

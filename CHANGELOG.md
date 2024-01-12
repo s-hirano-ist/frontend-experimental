@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/s-hirano-ist/frontend-experimental/compare/v1.0.0...v1.1.0) (2024-01-12)
+
+
+### ビルドプロセスまたは補助ツールの変更
+
+* **環境構築:** 🤖 add standard-version and git-cz ([dc00bc0](https://github.com/s-hirano-ist/frontend-experimental/commit/dc00bc00669698dd018ff91981c5382303845bf5))
+
 ## 1.0.0 (2024-01-12)
 
 
