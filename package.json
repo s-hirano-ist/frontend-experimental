@@ -89,7 +89,7 @@
     "eslint-plugin-prettier": "^5.1.2",
     "eslint-plugin-unused-imports": "^3.0.0",
     "git-cz": "^4.9.0",
-    "husky": "^8.0.3",
+    "husky": "^9.0.11",
     "lint-staged": "^15.2.0",
     "npm-run-all2": "^5.0.0",
     "openapi2aspida": "^0.23.2",
