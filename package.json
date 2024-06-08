@@ -12,7 +12,6 @@
     "lint:fix": "next lint --fix",
     "fmt": "prettier --check './src/**/*.{js,ts,tsx}'",
     "fmt:fix": "prettier --write './src/**/*.{js,ts,tsx}'",
-    "prepare": "husky install",
     "prisma:seed": "prisma db seed",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
@@ -20,15 +19,7 @@
     "prisma:studio": "prisma studio",
     "postinstall": "prisma generate",
     "codegen": "graphql-codegen --config codegen.ts",
-    "codegen:rest": "rm -rf src/types/generated && openapi2aspida -i src/types/swagger.json -o src/types/generated",
-    "release:patch": "standard-version --release-as patch",
-    "release:minor": "standard-version --release-as minor",
-    "release:major": "standard-version --release-as major",
-    "commit": "git-cz"
-  },
-  "lint-staged": {
-    "**/*.{js, jsx, ts, tsx}": "pnpm fmt",
-    "src/**/*.{js, jsx, ts, tsx}": "pnpm lint"
+    "codegen:rest": "rm -rf src/types/generated && openapi2aspida -i src/types/swagger.json -o src/types/generated"
   },
   "prisma": {
     "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
@@ -88,9 +79,6 @@
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-prettier": "^5.1.2",
     "eslint-plugin-unused-imports": "^3.0.0",
-    "git-cz": "^4.9.0",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.0",
     "npm-run-all2": "^6.1.2",
     "openapi2aspida": "^0.23.2",
     "prettier": "^3.1.1",
